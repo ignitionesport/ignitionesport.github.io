@@ -98,19 +98,52 @@ footer {
   background: rgba(0, 0, 0, 0.7);
   border-top: 1px solid rgba(0, 170, 255, 0.3);
 }
-/* Player images fix */
-.team-section img {
+/* === Team Section Styling === */
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px 10px;
+}
+
+.team-member {
+  background: #001233;
+  color: white;
+  text-align: center;
+  width: 280px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+}
+
+.team-member img {
   width: 250px;
   height: 250px;
   object-fit: cover;
   border-radius: 15px;
   display: block;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 0 auto 10px;
 }
 
-/* Center the player cards */
-.player-card {
-  text-align: center;
-  margin-bottom: 40px;
+@media (max-width: 900px) {
+  .team-member {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-member {
+    width: 90%;
+  }
+  .team-member img {
+    width: 100%;
+    height: auto;
+  }
   }
