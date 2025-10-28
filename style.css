@@ -116,16 +116,16 @@ body {
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeUpCard 0.8s ease forwards;
 }
 
-/* Card hover glow */
+/* Glowing hover effect */
 .team-member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0, 170, 255, 0.8);
+  transition: all 0.4s ease;
 }
 
 /* Team member image */
@@ -136,26 +136,22 @@ body {
   border-radius: 15px;
   display: block;
   margin: 0 auto 10px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
 }
 
 /* === Fade-up animation for team members === */
-@keyframes fadeUpCard {
+@keyframes playerFadeIn {
   from {
     opacity: 0;
     transform: translateY(30px);
+    box-shadow: 0 0 0 rgba(0,170,255,0);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+    box-shadow: 0 0 25px rgba(0,170,255,0.5);
   }
 }
-
-/* delay each card slightly */
-.team-member:nth-child(1) { animation-delay: 0.2s; }
-.team-member:nth-child(2) { animation-delay: 0.4s; }
-.team-member:nth-child(3) { animation-delay: 0.6s; }
-.team-member:nth-child(4) { animation-delay: 0.8s; }
-.team-member:nth-child(5) { animation-delay: 1s; }
 
 /* === Footer Fixed Styling === */
 footer {
@@ -164,7 +160,7 @@ footer {
   background: rgba(0, 0, 0, 0.7);
   border-top: 1px solid rgba(0, 170, 255, 0.3);
   width: 100%;
-  margin-top: 40px; /* space from last player */
+  margin-top: 40px;
   position: relative;
   bottom: 0;
   left: 0;
@@ -191,4 +187,4 @@ footer span {
     width: 100%;
     height: auto;
   }
-  }
+    }
