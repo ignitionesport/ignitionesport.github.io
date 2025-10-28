@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tournaments | Ignition eSports</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    h1, h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00aaff;
+      text-shadow: 0 0 15px #00aaff, 0 0 25px rgba(0,170,255,0.7);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 120px;
+      height: 3px;
+      margin: 12px auto 25px;
+      background: linear-gradient(90deg, #0077ff, #00ccff);
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,170,255,0.8);
+    }
+
+    .tournament-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 10px 80px;
+    }
+
+    .tournament-card {
+      background: rgba(0, 10, 40, 0.6);
+      border: 1px solid rgba(0,170,255,0.2);
+      width: 300px;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #cde9ff;
+    }
+
+    .tournament-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0,170,255,0.6);
+    }
+
+    .coming-soon {
+      text-align: center;
+      color: #00aaff;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      text-shadow: 0 0 12px #00aaff;
+      margin-top: 20px;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from { text-shadow: 0 0 10px #00aaff; opacity: 0.8; }
+      to { text-shadow: 0 0 25px #00ffff; opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loading screen -->
+  <div id="loading" class="loading-screen">
+    <h1>Loading...</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content hidden" id="mainContent">
+    <header class="header fade-in">
+      <div class="logo">
+        <div class="badge">IE</div>
+        <h1>Ignition eSports</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="players.html">Players</a>
+        <a href="tournaments.html" class="active">Tournaments</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="tournaments fade-in">
+      <h2 style="text-align:center; margin-top:50px;">🏆 Upcoming Tournaments 🏆</h2>
+      <div class="divider"></div>
+
+      <div class="tournament-container">
+        <div class="tournament-card">
+          <h3>Ignition Cup 2025</h3>
+          <p><strong>Date:</strong> Coming Soon</p>
+          <p><strong>Location:</strong> Online</p>
+          <p><strong>Format:</strong> 5v5 | Elimination</p>
+        </div>
+
+        <div class="tournament-card">
+          <h3>BattleZone Invitational</h3>
+          <p><strong>Date:</strong> Coming Soon</p>
+          <p><strong>Location:</strong> TBD</p>
+          <p><strong>Prize Pool:</strong> $1000+</p>
+        </div>
+
+        <div class="tournament-card">
+          <h3>Clash Arena Season 3</h3>
+          <p><strong>Date:</strong> Coming Soon</p>
+          <p><strong>Location:</strong> LAN/Online</p>
+          <p><strong>Stage:</strong> Registration Opening Soon</p>
+        </div>
+      </div>
+
+      <div class="coming-soon">🚀 More updates coming soon... Stay tuned! 🚀</div>
+    </section>
+
+    <footer>
+      © 2025 Ignition eSports. All Rights Reserved. · Email:
+      <span style="color:#00aaff;">harshuodedra@gmail.com</span> ·
+      Phone: <span style="color:#00aaff;">9687456171</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
