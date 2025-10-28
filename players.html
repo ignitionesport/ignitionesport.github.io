@@ -14,8 +14,8 @@
       font-family: 'Orbitron', sans-serif;
       color: #00aaff;
       text-shadow: 0 0 15px #00aaff, 0 0 25px rgba(0,170,255,0.7);
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .divider {
@@ -27,20 +27,59 @@
       box-shadow: 0 0 10px rgba(0,170,255,0.8);
     }
 
-    .intro {
-      text-align: center;
-      color: #cde9ff;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.05rem;
-      margin: 40px auto 20px;
-      max-width: 850px;
-      line-height: 1.6;
+    .players-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 40px 15px;
     }
 
-    .team-member:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 0 25px rgba(0,123,255,0.6);
-      transition: 0.3s ease;
+    .player-card {
+      background: rgba(0, 15, 45, 0.7);
+      border: 1px solid rgba(0,170,255,0.3);
+      border-radius: 15px;
+      padding: 20px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,170,255,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .player-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0,170,255,0.6);
+    }
+
+    .player-card img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 0 10px rgba(0,170,255,0.4);
+    }
+
+    .player-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ccff;
+      margin-bottom: 5px;
+    }
+
+    .player-card p {
+      color: #cde9ff;
+      font-size: 0.95rem;
+      margin: 3px 0;
+    }
+
+    @media (max-width: 700px) {
+      .player-card {
+        width: 90%;
+      }
+      .player-card img {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -48,10 +87,9 @@
 <body>
   <!-- Loading screen -->
   <div id="loading" class="loading-screen">
-    <h1>Loading...</h1>
+    <h1>Loading Players...</h1>
   </div>
 
-  <!-- Main Content -->
   <div class="content hidden" id="mainContent">
     <header class="header fade-in">
       <div class="logo">
@@ -67,57 +105,50 @@
       </nav>
     </header>
 
-    <section class="players fade-in">
-      <h2 style="text-align:center; margin-top:50px;">🔥 Meet Our Players 🔥</h2>
+    <section class="fade-in" style="text-align:center; margin-top:50px;">
+      <h2>🔥 Meet the Squad 🔥</h2>
       <div class="divider"></div>
-      <p class="intro">
-        Meet the players who make <span style="color:#00aaff;">Ignition eSports</span> shine —
-        each one brings passion, precision, and personality to every match.  
-        Together, they represent teamwork, strategy, and the true spirit of gaming.
-      </p>
 
-      <section class="team fade-in">
-        <div class="team-member">
-          <img src="player1.jpg" alt="IC PHOENIX — Prasanjit">
+      <div class="players-container">
+        <div class="player-card">
+          <img src="player1.jpg" alt="IC PHOENIX">
           <h3>IC PHOENIX</h3>
           <p><strong>Role:</strong> Assaulter</p>
           <p><strong>Name:</strong> Prasanjit</p>
         </div>
 
-        <div class="team-member">
-          <img src="player2.jpg" alt="IC TOBI — Avir">
+        <div class="player-card">
+          <img src="player2.jpg" alt="IC TOBI">
           <h3>IC TOBI</h3>
           <p><strong>Role:</strong> Secondary Rusher</p>
           <p><strong>Name:</strong> Avir</p>
         </div>
 
-        <div class="team-member">
-          <img src="player3.jpg" alt="IC MADARA — Abhyuday">
+        <div class="player-card">
+          <img src="player3.jpg" alt="IC MADARA">
           <h3>IC MADARA</h3>
           <p><strong>Role:</strong> Sniper</p>
           <p><strong>Name:</strong> Abhyuday</p>
         </div>
 
-        <div class="team-member">
-          <img src="player4.jpg" alt="IC SYREX — Himansu">
+        <div class="player-card">
+          <img src="player4.jpg" alt="IC SYREX">
           <h3>IC SYREX</h3>
           <p><strong>Role:</strong> All Rounder</p>
           <p><strong>Name:</strong> Himansu</p>
         </div>
 
-        <div class="team-member">
-          <img src="player5.jpg" alt="IC VOLT — Yash">
+        <div class="player-card">
+          <img src="player5.jpg" alt="IC VOLT">
           <h3>IC VOLT</h3>
           <p><strong>Role:</strong> Primary Rusher</p>
           <p><strong>Name:</strong> Yash</p>
         </div>
-      </section>
+      </div>
     </section>
 
     <footer>
-      © 2025 Ignition eSports. All Rights Reserved. · Email:
-      <span style="color:#00aaff;">harshuodedra@gmail.com</span> ·
-      Phone: <span style="color:#00aaff;">9687456171</span>
+      © 2025 Ignition eSports. All Rights Reserved.
     </footer>
   </div>
 
