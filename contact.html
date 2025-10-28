@@ -14,8 +14,8 @@
       font-family: 'Orbitron', sans-serif;
       color: #00aaff;
       text-shadow: 0 0 15px #00aaff, 0 0 25px rgba(0,170,255,0.7);
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .divider {
@@ -28,88 +28,77 @@
     }
 
     .contact-container {
-      max-width: 600px;
-      margin: 40px auto 100px;
-      background: rgba(0, 10, 40, 0.7);
+      width: 85%;
+      max-width: 700px;
+      margin: 60px auto;
+      background: rgba(0, 0, 30, 0.8);
       border: 1px solid rgba(0,170,255,0.3);
-      padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,170,255,0.2);
-      text-align: center;
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(0,170,255,0.3);
     }
 
-    .contact-container p {
-      color: #cde9ff;
-      margin-bottom: 20px;
-      font-size: 1rem;
+    .contact-container:hover {
+      box-shadow: 0 0 45px rgba(0,170,255,0.5);
+      transition: 0.3s ease;
     }
 
-    .contact-info {
-      margin-top: 15px;
-      color: #00aaff;
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #aee1ff;
       font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      text-shadow: 0 0 6px #00aaff;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 20px;
     }
 
     input, textarea {
-      background: rgba(0,0,0,0.6);
+      width: 100%;
+      padding: 10px;
       border: 1px solid rgba(0,170,255,0.4);
-      padding: 12px;
-      color: white;
       border-radius: 8px;
+      background: rgba(0, 10, 40, 0.9);
+      color: white;
+      font-family: 'Poppins', sans-serif;
       font-size: 1rem;
+      margin-bottom: 18px;
       outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: 0.3s;
     }
 
     input:focus, textarea:focus {
-      border-color: #00ccff;
-      box-shadow: 0 0 8px #00ccff;
+      border-color: #00aaff;
+      box-shadow: 0 0 10px #00aaff;
     }
 
     button {
       background: linear-gradient(90deg, #0044ff, #00aaff);
       color: white;
+      padding: 10px 18px;
       border: none;
-      padding: 12px;
       border-radius: 8px;
       font-weight: 600;
-      font-family: 'Poppins', sans-serif;
-      text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 15px rgba(0,170,255,0.4);
+      box-shadow: 0 0 15px rgba(0,170,255,0.6);
+      transition: 0.3s ease;
     }
 
     button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 25px rgba(0,170,255,0.7);
+      box-shadow: 0 0 25px rgba(0,170,255,0.9);
     }
 
-    .social-links {
-      margin-top: 25px;
+    .contact-info {
+      text-align: center;
+      color: #cde9ff;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 20px;
+      line-height: 1.6;
     }
 
-    .social-links a {
-      margin: 0 10px;
-      color: #00ccff;
+    .contact-info span {
+      color: #00aaff;
+      text-shadow: 0 0 6px #00aaff;
       font-weight: 600;
-      text-decoration: none;
-      text-shadow: 0 0 8px #00ccff;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: white;
-      text-shadow: 0 0 15px #00ffff;
     }
   </style>
 </head>
@@ -117,7 +106,7 @@
 <body>
   <!-- Loading screen -->
   <div id="loading" class="loading-screen">
-    <h1>Loading...</h1>
+    <h1>Loading Contact Page...</h1>
   </div>
 
   <div class="content hidden" id="mainContent">
@@ -135,32 +124,34 @@
       </nav>
     </header>
 
-    <section class="contact fade-in">
-      <h2 style="text-align:center; margin-top:50px;">📩 Contact Us 📩</h2>
+    <section class="fade-in" style="text-align:center; margin-top:50px;">
+      <h2>📞 Contact Us</h2>
       <div class="divider"></div>
-
-      <div class="contact-container">
-        <p>Have questions or want to join the Ignition eSports team? Fill out the form or contact us directly.</p>
-
-        <form onsubmit="event.preventDefault(); alert('Message sent successfully! 🔥'); this.reset();">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea rows="4" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-
-        <div class="contact-info">
-          📞 Phone: 9687456171 <br>
-          ✉️ Email: harshuodedra@gmail.com
-        </div>
-
-        <div class="social-links">
-          <a href="#">Instagram</a> |
-          <a href="#">Discord</a> |
-          <a href="#">YouTube</a>
-        </div>
-      </div>
+      <p style="color:#cde9ff; font-family:'Poppins',sans-serif; font-size:1rem;">
+        Got questions or want to join the Ignition eSports family?  
+        Fill out the form below or reach us directly!
+      </p>
     </section>
+
+    <div class="contact-container fade-in">
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info fade-in">
+        <p>📧 Email: <span>harshuodedra@gmail.com</span></p>
+        <p>📱 Phone: <span>+91 9687456171</span></p>
+      </div>
+    </div>
 
     <footer>
       © 2025 Ignition eSports. All Rights Reserved.
@@ -169,4 +160,4 @@
 
   <script src="script.js"></script>
 </body>
-      </html>
+</html>
