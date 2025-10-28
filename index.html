@@ -6,7 +6,11 @@
   <title>Ignition eSports – Rise to Win</title>
 
   <!-- Google Fonts for esports vibe -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- main stylesheet (must be in repo root) -->
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -29,6 +33,9 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 400;
       color: #cde9ff;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.5;
     }
     .cta-glow {
       background: linear-gradient(90deg, #0044ff, #00aaff);
@@ -46,14 +53,19 @@
       transform: translateY(-3px);
       box-shadow: 0 0 25px rgba(0,170,255,0.8);
     }
+
+    /* tiny responsive tweak so hero text doesn't hug edges on small screens */
+    @media (max-width: 480px) {
+      .hero p { padding: 0 16px; font-size: 0.98rem; }
+    }
   </style>
 </head>
 
 <body>
   <!-- Loading screen -->
-  <div id="loading" class="loading-screen">
+  <div id="loading" class="loading-screen" role="status" aria-live="polite">
     <div style="display:flex;align-items:center;gap:12px">
-      <div class="badge">IE</div>
+      <div class="badge" aria-hidden="true">IE</div>
       <div style="text-align:left">
         <h1 style="font-family:'Orbitron',sans-serif;">Ignition eSports Loading...</h1>
         <p style="font-size:14px;color:#9ecfff">Rise to Win</p>
@@ -63,79 +75,84 @@
 
   <!-- Main content -->
   <div class="content hidden" id="mainContent">
-    <header class="header fade-in">
-      <div class="logo">
-        <div class="badge">IE</div>
-        <h1 style="font-family:'Orbitron',sans-serif;">Ignition eSports</h1>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="players.html">Players</a>
-        <a href="tournaments.html">Tournaments</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+    <div class="container">
+      <header class="header fade-in" role="banner" style="display:flex;justify-content:space-between;align-items:center;">
+        <div class="logo" style="display:flex;align-items:center;gap:12px;">
+          <div class="badge" aria-hidden="true">IE</div>
+          <h1 style="font-family:'Orbitron',sans-serif;margin:0;">Ignition eSports</h1>
+        </div>
 
-    <!-- Hero Section -->
-    <section class="hero fade-in" style="text-align:center; margin-top:60px;">
-      <h2>Ignition eSports – Rise to Win</h2>
-      <div class="divider"></div>
-      <p style="font-size:1.1rem;">
-        Welcome to <strong style="color:#00aaff;">Ignition eSports</strong> — a team built on passion, discipline, and skill.  
-        We rise together, play smart, and compete with pride in every match.
-      </p>
-      <a class="cta-glow" href="players.html">Meet the Players</a>
-    </section>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="players.html">Players</a>
+          <a href="tournaments.html">Tournaments</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
 
-    <!-- Team Section -->
-    <h2 class="fade-in" style="text-align:center; margin-top:50px;">🔥 Our Team 🔥</h2>
-    <div class="divider"></div>
+      <!-- Hero Section -->
+      <section class="hero fade-in" style="text-align:center; margin-top:60px;">
+        <h2>Ignition eSports – Rise to Win</h2>
+        <div class="divider" aria-hidden="true"></div>
+        <p style="font-size:1.1rem;">
+          Welcome to <strong style="color:#00aaff;">Ignition eSports</strong> — a team built on passion, discipline, and skill.  
+          We rise together, play smart, and compete with pride in every match.
+        </p>
+        <a class="cta-glow" href="players.html">Meet the Players</a>
+      </section>
 
-    <section class="team fade-in">
-      <div class="team-member">
-        <img src="player1.jpg" alt="IC PHOENIX">
-        <h3>IC PHOENIX</h3>
-        <p>Role: Assaulter</p>
-        <p>Name: Prasanjit</p>
-      </div>
+      <!-- Team Section -->
+      <h2 class="fade-in" style="text-align:center; margin-top:50px;">🔥 Our Team 🔥</h2>
+      <div class="divider" aria-hidden="true"></div>
 
-      <div class="team-member">
-        <img src="player2.jpg" alt="IC TOBI">
-        <h3>IC TOBI</h3>
-        <p>Role: Secondary Rusher</p>
-        <p>Name: Avir</p>
-      </div>
+      <section class="team fade-in" aria-label="Team members">
+        <div class="team-member">
+          <img src="player1.jpg" alt="IC PHOENIX — Prasanjit">
+          <h3>IC PHOENIX</h3>
+          <p><strong>Role:</strong> Assaulter</p>
+          <p><strong>Name:</strong> Prasanjit</p>
+        </div>
 
-      <div class="team-member">
-        <img src="player3.jpg" alt="IC MADARA">
-        <h3>IC MADARA</h3>
-        <p>Role: Sniper</p>
-        <p>Name: Abhyuday</p>
-      </div>
+        <div class="team-member">
+          <img src="player2.jpg" alt="IC TOBI — Avir">
+          <h3>IC TOBI</h3>
+          <p><strong>Role:</strong> Secondary Rusher</p>
+          <p><strong>Name:</strong> Avir</p>
+        </div>
 
-      <div class="team-member">
-        <img src="player4.jpg" alt="IC SYREX">
-        <h3>IC SYREX</h3>
-        <p>Role: All Rounder</p>
-        <p>Name: Himansu</p>
-      </div>
+        <div class="team-member">
+          <img src="player3.jpg" alt="IC MADARA — Abhyuday">
+          <h3>IC MADARA</h3>
+          <p><strong>Role:</strong> Sniper</p>
+          <p><strong>Name:</strong> Abhyuday</p>
+        </div>
 
-      <div class="team-member">
-        <img src="player5.jpg" alt="IC VOLT">
-        <h3>IC VOLT</h3>
-        <p>Role: Primary Rusher</p>
-        <p>Name: Yash</p>
-      </div>
-    </section>
+        <div class="team-member">
+          <img src="player4.jpg" alt="IC SYREX — Himansu">
+          <h3>IC SYREX</h3>
+          <p><strong>Role:</strong> All Rounder</p>
+          <p><strong>Name:</strong> Himansu</p>
+        </div>
 
-    <footer>
-      © 2025 Ignition eSports. All Rights Reserved. · Email:
-      <span style="color:#00aaff;">harshuodedra@gmail.com</span> ·
-      Phone: <span style="color:#00aaff;">9687456171</span>
-    </footer>
-  </div>
+        <div class="team-member">
+          <img src="player5.jpg" alt="IC VOLT — Yash">
+          <h3>IC VOLT</h3>
+          <p><strong>Role:</strong> Primary Rusher</p>
+          <p><strong>Name:</strong> Yash</p>
+        </div>
+      </section>
 
+      <!-- Footer (inside container) -->
+      <footer>
+        © 2025 Ignition eSports. All Rights Reserved. · Email:
+        <span style="color:#00aaff;">harshuodedra@gmail.com</span> ·
+        Phone: <span style="color:#00aaff;">9687456171</span>
+      </footer>
+    </div> <!-- /.container -->
+  </div> <!-- /.content -->
+
+  <!-- main script (must be in repo root) -->
   <script src="script.js"></script>
 </body>
-                              </html>
+            </html>
