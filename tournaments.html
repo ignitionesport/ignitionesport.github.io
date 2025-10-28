@@ -27,41 +27,55 @@
       box-shadow: 0 0 10px rgba(0,170,255,0.8);
     }
 
-    .coming-soon {
-      text-align: center;
-      margin-top: 100px;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
-      color: #00aaff;
-      text-shadow: 0 0 15px #00aaff, 0 0 25px rgba(0,170,255,0.8);
-      animation: pulse 1.8s infinite alternate;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 0.6; transform: scale(0.98); }
-      100% { opacity: 1; transform: scale(1.02); }
-    }
-
-    .tournament-bg {
-      background: radial-gradient(circle at center, rgba(0,170,255,0.1) 0%, rgba(0,0,0,0.9) 80%);
-      border: 1px solid rgba(0,170,255,0.2);
-      border-radius: 15px;
-      padding: 40px;
+    .tournament-container {
+      width: 85%;
+      max-width: 900px;
       margin: 60px auto;
-      width: 80%;
-      max-width: 600px;
-      box-shadow: 0 0 30px rgba(0,170,255,0.2);
+      padding: 30px;
+      background: rgba(0, 0, 30, 0.85);
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,170,255,0.3);
+      text-align: center;
+      border: 1px solid rgba(0,170,255,0.3);
     }
 
-    .tournament-bg:hover {
-      box-shadow: 0 0 50px rgba(0,170,255,0.4);
-      transition: 0.3s ease;
+    .coming-soon {
+      font-size: 2rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #00aaff;
+      text-shadow: 0 0 20px #00aaff, 0 0 40px #0077ff;
+      margin-top: 20px;
+      animation: glowPulse 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes glowPulse {
+      from {
+        text-shadow: 0 0 10px #00aaff, 0 0 25px #0077ff;
+        opacity: 0.8;
+      }
+      to {
+        text-shadow: 0 0 25px #00ccff, 0 0 50px #00aaff;
+        opacity: 1;
+      }
+    }
+
+    .tournament-text {
+      font-family: 'Poppins', sans-serif;
+      color: #cde9ff;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-top: 15px;
+    }
+
+    .highlight {
+      color: #00ccff;
+      font-weight: 600;
     }
   </style>
 </head>
 
 <body>
-  <!-- Loading screen -->
+  <!-- Loading Screen -->
   <div id="loading" class="loading-screen">
     <h1>Loading Tournaments...</h1>
   </div>
@@ -81,16 +95,20 @@
       </nav>
     </header>
 
-    <section class="fade-in" style="text-align:center; margin-top:60px;">
-      <h2>🏆 Upcoming Tournaments</h2>
+    <section class="fade-in" style="text-align:center; margin-top:50px;">
+      <h2>🏆 Our Tournaments</h2>
       <div class="divider"></div>
-
-      <div class="tournament-bg fade-in">
-        <p class="coming-soon">🔥 New Tournament Updates Coming Soon! 🔥</p>
-        <p style="color:#cde9ff; font-family:'Poppins',sans-serif; font-size:1rem; margin-top:15px;">
-          Stay tuned as Ignition eSports gears up for thrilling competitions —  
-          updates will appear here once events are officially announced!
+      <div class="tournament-container fade-in">
+        <p class="tournament-text">
+          At <span class="highlight">Ignition eSports</span>, we’re gearing up to compete in some of the most thrilling esports tournaments — from national-level championships to online qualifiers.
         </p>
+
+        <p class="tournament-text">
+          Stay tuned for upcoming announcements about <span class="highlight">matches, results, and live streams</span>.  
+          We’re preparing our strategies, sharpening our skills, and getting ready to make our mark.
+        </p>
+
+        <div class="coming-soon">🚀 Coming Soon...</div>
       </div>
     </section>
 
