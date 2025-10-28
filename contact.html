@@ -4,20 +4,52 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ignition eSports – Contact Us</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      color: #00aaff;
+      text-shadow: 0 0 15px #00aaff, 0 0 25px rgba(0,170,255,0.7);
+      letter-spacing: 1px;
+    }
+    .divider {
+      width: 120px;
+      height: 3px;
+      margin: 12px auto 25px;
+      background: linear-gradient(90deg, #0077ff, #00ccff);
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,170,255,0.8);
+    }
+    .contact-box {
+      max-width: 600px;
+      margin: 50px auto;
+      background: rgba(0,0,30,0.6);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,170,255,0.2);
+    }
+    .contact-box p {
+      color: #cde9ff;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Loading screen -->
   <div id="loading" class="loading-screen">
     <h1>Loading Contact Page...</h1>
   </div>
 
-  <!-- Main content -->
   <div class="content hidden" id="mainContent">
     <header class="header fade-in">
       <div class="logo">
         <div class="badge">IE</div>
-        <h1>Ignition eSports</h1>
+        <h1 style="font-family:'Orbitron',sans-serif;">Ignition eSports</h1>
       </div>
       <nav class="nav">
         <a href="index.html">Home</a>
@@ -29,25 +61,15 @@
     </header>
 
     <section class="hero fade-in" style="text-align:center; margin-top:60px;">
-      <h2>Contact Ignition eSports</h2>
-      <p style="font-size:1.1rem; color:#b0dfff; margin-top:10px;">
-        Get in touch with us for collaborations, sponsorships, or team recruitment.
-      </p>
+      <h2>Contact Us</h2>
+      <div class="divider"></div>
+      <p style="color:#b0dfff;">We’d love to hear from you — whether it’s a sponsorship, a collaboration, or just to say hi!</p>
 
-      <div style="margin-top:40px;">
-        <p style="font-size:1.1rem; margin-bottom:10px;">
-          📧 <strong>Email:</strong> 
-          <span style="color:#00aaff;">harshuodedra@gmail.com</span>
-        </p>
-        <p style="font-size:1.1rem;">
-          📱 <strong>Phone:</strong> 
-          <span style="color:#00aaff;">9687456171</span>
-        </p>
+      <div class="contact-box fade-in">
+        <p>📧 <strong>Email:</strong> <span style="color:#00aaff;">harshuodedra@gmail.com</span></p>
+        <p>📱 <strong>Phone:</strong> <span style="color:#00aaff;">9687456171</span></p>
+        <p style="margin-top:20px;">We’ll get back to you as soon as possible. Thank you for supporting Ignition eSports 💙</p>
       </div>
-
-      <p style="margin-top:30px; color:#9ecfff;">
-        Follow us on social media and stay updated on our latest matches and announcements!
-      </p>
     </section>
 
     <footer>
@@ -59,4 +81,4 @@
 
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
