@@ -16,8 +16,25 @@ window.addEventListener("load", () => {
       const fadeElements = document.querySelectorAll(".fade-in");
       fadeElements.forEach((el, i) => {
         el.style.animation = `fadeUp 0.8s ease forwards`;
-        el.style.animationDelay = `${i * 120}ms`;
+        el.style.animationDelay = `${i * 150}ms`;
       });
+
+      // Trigger team card animations once visible
+      const teamCards = document.querySelectorAll(".team-member");
+      teamCards.forEach((card) => {
+        card.style.animationPlayState = "running";
+      });
+
+      // Add glow effect to "Our Team" title
+      const teamTitle = document.querySelector("h2");
+      if (teamTitle && teamTitle.textContent.includes("Our Team")) {
+        teamTitle.style.textShadow = "0 0 20px #00aaff, 0 0 40px #00aaff";
+        teamTitle.style.transition = "text-shadow 1s ease-in-out";
+        setTimeout(() => {
+          teamTitle.style.textShadow = "0 0 10px #00aaff";
+        }, 2500);
+      }
+
     }, 1000);
   }, 2500);
 });
