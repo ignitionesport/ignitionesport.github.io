@@ -92,28 +92,7 @@
     </footer>
   </div>
 
-  <!-- Inline JS (no external files needed) -->
-  <script>
-    // Show loading screen briefly before revealing main content
-    (function(){
-      const loading = document.getElementById('loading');
-      const main = document.getElementById('mainContent');
-
-      window.addEventListener('load', ()=> {
-        setTimeout(()=> {
-          loading.style.transition = 'opacity .8s ease';
-          loading.style.opacity = '0';
-          setTimeout(()=> {
-            loading.remove();
-            main.classList.remove('hidden');
-            const elems = document.querySelectorAll('.fade-in');
-            elems.forEach((el,i)=> {
-              el.style.animationDelay = (i * 120) + 'ms';
-            });
-          }, 900);
-        }, 1600);
-      });
-    })();
-  </script>
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
