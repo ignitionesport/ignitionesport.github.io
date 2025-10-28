@@ -14,8 +14,8 @@
       font-family: 'Orbitron', sans-serif;
       color: #00aaff;
       text-shadow: 0 0 15px #00aaff, 0 0 25px rgba(0,170,255,0.7);
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .divider {
@@ -27,51 +27,70 @@
       box-shadow: 0 0 10px rgba(0,170,255,0.8);
     }
 
-    .about-section {
-      text-align: center;
-      max-width: 950px;
-      margin: 80px auto;
-      padding: 20px;
-      background: rgba(0, 10, 40, 0.5);
+    .about-container {
+      max-width: 900px;
+      margin: 50px auto 80px;
+      padding: 30px;
+      background: rgba(0, 10, 40, 0.7);
+      border: 1px solid rgba(0,170,255,0.3);
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0,170,255,0.2);
+      text-align: center;
+      line-height: 1.6;
     }
 
-    .about-section p {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.05rem;
+    .about-container p {
       color: #cde9ff;
-      line-height: 1.7;
-      margin-bottom: 20px;
+      font-size: 1.05rem;
+      margin-bottom: 15px;
     }
 
-    .highlight {
+    .about-container strong {
       color: #00aaff;
-      font-weight: 600;
     }
 
-    .quote {
-      font-style: italic;
-      color: #b0dfff;
-      margin-top: 15px;
+    .about-values {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .cta-glow {
-      background: linear-gradient(90deg, #0044ff, #00aaff);
-      color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 0 15px rgba(0,170,255,0.6);
+    .value-card {
+      background: rgba(0, 20, 60, 0.7);
+      border: 1px solid rgba(0,170,255,0.3);
+      border-radius: 12px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 0 15px rgba(0,170,255,0.2);
       transition: 0.3s ease;
-      display: inline-block;
-      margin-top: 25px;
     }
 
-    .cta-glow:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px rgba(0,170,255,0.8);
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0,170,255,0.4);
+    }
+
+    .value-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ccff;
+      margin-bottom: 8px;
+    }
+
+    .value-card p {
+      font-size: 0.95rem;
+      color: #cde9ff;
+    }
+
+    @media (max-width: 700px) {
+      .about-container {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+      .value-card {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -82,7 +101,6 @@
     <h1>Loading...</h1>
   </div>
 
-  <!-- Main Content -->
   <div class="content hidden" id="mainContent">
     <header class="header fade-in">
       <div class="logo">
@@ -98,37 +116,39 @@
       </nav>
     </header>
 
-    <section class="about-section fade-in">
-      <h2>Who We Are</h2>
+    <section class="about fade-in">
+      <h2 style="text-align:center;">🔥 About Ignition eSports 🔥</h2>
       <div class="divider"></div>
-      <p>
-        <span class="highlight">Ignition eSports</span> was born from a shared dream — to turn casual gaming into something greater.
-        What started as a small group of friends playing for fun soon evolved into a dedicated team with one mission:
-        <strong>to compete, improve, and inspire others to do the same.</strong>
-      </p>
 
-      <p>
-        We believe in teamwork over ego, effort over luck, and discipline over hype. Every player on our roster brings
-        their own unique energy, skill, and personality — but together, we move with one mindset: <span class="highlight">Rise to Win.</span>
-      </p>
+      <div class="about-container">
+        <p><strong>Ignition eSports</strong> was founded with one mission — to build a team that doesn’t just play, but dominates. Every member of our squad brings unique energy, precision, and teamwork to the field.</p>
 
-      <p>
-        Whether it’s intense ranked matches, tournament play, or community events, we’re always pushing forward.
-        Our focus isn’t just on winning — it’s about learning, building chemistry, and growing stronger after every match.
-      </p>
+        <p>We started as a small group of passionate players, driven by the thrill of competition. Through countless matches and endless practice, we evolved into a disciplined esports organization representing skill, strategy, and heart.</p>
 
-      <p class="quote">“Success isn’t given — it’s earned through passion, patience, and perseverance.”</p>
+        <p>Our motto, <strong>"Rise to Win"</strong>, defines who we are — a team that adapts, grows, and never gives up.</p>
 
-      <a href="players.html" class="cta-glow">Meet Our Team</a>
+        <div class="about-values">
+          <div class="value-card">
+            <h3>⚔️ Teamwork</h3>
+            <p>Every victory comes from trust, coordination, and unity. We rise together.</p>
+          </div>
+          <div class="value-card">
+            <h3>🎯 Focus</h3>
+            <p>Discipline and sharp aim — both in-game and in life — keep us ahead.</p>
+          </div>
+          <div class="value-card">
+            <h3>🔥 Passion</h3>
+            <p>We don’t play for fame. We play because gaming is in our blood.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-      © 2025 Ignition eSports. All Rights Reserved. · Email:
-      <span style="color:#00aaff;">harshuodedra@gmail.com</span> ·
-      Phone: <span style="color:#00aaff;">9687456171</span>
+      © 2025 Ignition eSports. All Rights Reserved.
     </footer>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
+  </html>
