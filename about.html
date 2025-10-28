@@ -5,70 +5,109 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About – Ignition eSports</title>
 
-  <!-- Link to your shared CSS -->
+  <!-- Google Font for esports look -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      color: #00aaff;
+      text-shadow: 0 0 15px #00aaff, 0 0 25px rgba(0,170,255,0.7);
+      letter-spacing: 1px;
+    }
+    .divider {
+      width: 120px;
+      height: 3px;
+      margin: 12px auto 25px;
+      background: linear-gradient(90deg, #0077ff, #00ccff);
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,170,255,0.8);
+    }
+    .hero p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      color: #cde9ff;
+    }
+    .content p strong {
+      color: #00aaff;
+      text-shadow: 0 0 5px #00aaff;
+    }
+    .cta-glow {
+      background: linear-gradient(90deg, #0044ff, #00aaff);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 0 15px rgba(0,170,255,0.6);
+      transition: 0.3s ease;
+    }
+    .cta-glow:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0,170,255,0.8);
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Loading screen -->
   <div id="loading" class="loading-screen">
-    <div style="display:flex;align-items:center;gap:12px">
-      <div class="badge">IE</div>
-      <div style="text-align:left">
-        <h1>Ignition eSports Loading...</h1>
-        <p style="font-size:14px;color:var(--muted)">Rise to Win</p>
-      </div>
-    </div>
+    <h1>Loading About Page...</h1>
   </div>
 
-  <!-- Main content -->
   <div class="content hidden" id="mainContent">
-    <div class="container">
-      <!-- Header / Navbar -->
-      <header class="header fade-in">
-        <div class="logo">
-          <div class="badge">IE</div>
-          <h1>Ignition eSports</h1>
-        </div>
-        <nav class="nav">
-          <a href="index.html">Home</a>
-          <a href="about.html" class="active">About</a>
-          <a href="players.html">Players</a>
-          <a href="tournaments.html">Tournaments</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </header>
+    <header class="header fade-in">
+      <div class="logo">
+        <div class="badge">IE</div>
+        <h1 style="font-family:'Orbitron',sans-serif;">Ignition eSports</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="players.html">Players</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-      <!-- About Section -->
-      <section class="hero fade-in" style="margin-top:40px; text-align:center;">
-  <h2>About Ignition eSports</h2>
-  <p style="max-width:800px; margin:10px auto; color:#cde9ff;">
-    Ignition eSports started in 2025 with a small group of friends who shared one goal — to build a team that plays with passion, discipline, and teamwork.
-  </p>
-  <p style="max-width:800px; margin:10px auto; color:#cde9ff;">
-    We’re a growing competitive squad that believes in grinding hard, learning from every match, and improving together. Every win, every loss — it all fuels our journey.
-  </p>
-  <p style="max-width:800px; margin:10px auto; color:#cde9ff;">
-    This isn’t just a team to us — it’s family. We push each other to go further, play smarter, and keep the fire burning in every game we enter.
-  </p>
-</section>
+    <section class="hero fade-in" style="text-align:center; margin-top:60px;">
+      <h2>About Ignition eSports</h2>
+      <div class="divider"></div>
+      <p style="font-size:1.1rem; color:#b0dfff;">
+        We’re a group of passionate players who started with one goal — to rise together and make a mark in the esports scene.
+      </p>
 
-<section class="fade-in" style="text-align:center; margin-top:50px;">
-  <h2 style="color:#00aaff;">🔥 Our Mission 🔥</h2>
-  <p style="max-width:700px; margin:15px auto; color:#cde9ff;">
-    To grow stronger together — to play fair, fight hard, and keep the spirit of gaming alive.
-  </p>
-</section>
+      <div style="max-width:800px; margin:40px auto; text-align:left; color:#cde9ff; line-height:1.7;">
+        <p>
+          <strong>Ignition eSports</strong> was built from the ground up by a small team of friends who love the game and live for the grind.
+          From local scrims to competitive tournaments, every match has taught us teamwork, trust, and focus.
+        </p>
 
-      <!-- Footer -->
-      <footer>
-        © 2025 Ignition eSports. All Rights Reserved. · Email:
-        <span style="color:#00aaff;">harshuodedra@gmail.com</span> · 
-        Phone: <span style="color:#00aaff;">9687456171</span>
-      </footer>
-    </div>
+        <p style="margin-top:20px;">
+          We believe that dedication and team chemistry matter more than anything.
+          Our players train daily to improve their skills and adapt to every challenge — aiming not just to win, but to inspire.
+        </p>
+
+        <p style="margin-top:20px;">
+          Our goal is simple — keep improving, keep competing, and represent Ignition eSports with pride.
+          This is just the beginning.
+        </p>
+      </div>
+
+      <a href="players.html" class="cta-glow fade-in">Meet Our Players</a>
+
+      <p style="margin-top:40px; color:#9ecfff;">#RiseToWin 🔥</p>
+    </section>
+
+    <footer>
+      © 2025 Ignition eSports. All Rights Reserved. · Email:
+      <span style="color:#00aaff;">harshuodedra@gmail.com</span> ·
+      Phone: <span style="color:#00aaff;">9687456171</span>
+    </footer>
   </div>
 
-  <!-- Shared JavaScript -->
   <script src="script.js"></script>
 </body>
-          </html>
+</html>
+``
