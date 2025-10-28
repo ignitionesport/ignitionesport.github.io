@@ -5,26 +5,60 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Players | Ignition eSports</title>
 
-  <!-- Link to external CSS -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    h1, h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00aaff;
+      text-shadow: 0 0 15px #00aaff, 0 0 25px rgba(0,170,255,0.7);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 120px;
+      height: 3px;
+      margin: 12px auto 25px;
+      background: linear-gradient(90deg, #0077ff, #00ccff);
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,170,255,0.8);
+    }
+
+    .intro {
+      text-align: center;
+      color: #cde9ff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      margin: 40px auto 20px;
+      max-width: 850px;
+      line-height: 1.6;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 0 25px rgba(0,123,255,0.6);
+      transition: 0.3s ease;
+    }
+  </style>
 </head>
+
 <body>
   <!-- Loading screen -->
   <div id="loading" class="loading-screen">
-    <div style="display:flex;align-items:center;gap:12px">
-      <div class="badge">IE</div>
-      <div style="text-align:left">
-        <h1>Loading Players...</h1>
-        <p style="font-size:14px;color:var(--muted)">Preparing the Squad</p>
-      </div>
-    </div>
+    <h1>Loading...</h1>
   </div>
 
-  <!-- Main content -->
+  <!-- Main Content -->
   <div class="content hidden" id="mainContent">
-    <header class="navbar">
-      <div class="logo">IE</div>
-      <nav>
+    <header class="header fade-in">
+      <div class="logo">
+        <div class="badge">IE</div>
+        <h1>Ignition eSports</h1>
+      </div>
+      <nav class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="players.html" class="active">Players</a>
@@ -33,47 +67,51 @@
       </nav>
     </header>
 
-    <section class="hero fade-in" style="margin-top:80px;text-align:center;">
-      <h2>🔥 Meet Our Squad 🔥</h2>
-      <p>These are the warriors who represent <b>Ignition eSports</b> with skill, strategy, and heart. Each player plays a vital role in leading us to victory.</p>
-    </section>
+    <section class="players fade-in">
+      <h2 style="text-align:center; margin-top:50px;">🔥 Meet Our Players 🔥</h2>
+      <div class="divider"></div>
+      <p class="intro">
+        Meet the players who make <span style="color:#00aaff;">Ignition eSports</span> shine —
+        each one brings passion, precision, and personality to every match.  
+        Together, they represent teamwork, strategy, and the true spirit of gaming.
+      </p>
 
-    <!-- Player Cards -->
-    <section class="team fade-in">
-      <div class="team-member">
-        <img src="player1.jpg" alt="IC PHOENIX">
-        <h3>IC PHOENIX</h3>
-        <p><strong>Role:</strong> Assaulter</p>
-        <p><strong>Name:</strong> Prasanjit</p>
-      </div>
+      <section class="team fade-in">
+        <div class="team-member">
+          <img src="player1.jpg" alt="IC PHOENIX — Prasanjit">
+          <h3>IC PHOENIX</h3>
+          <p><strong>Role:</strong> Assaulter</p>
+          <p><strong>Name:</strong> Prasanjit</p>
+        </div>
 
-      <div class="team-member">
-        <img src="player2.jpg" alt="IC TOBI">
-        <h3>IC TOBI</h3>
-        <p><strong>Role:</strong> Secondary Rusher</p>
-        <p><strong>Name:</strong> Avir</p>
-      </div>
+        <div class="team-member">
+          <img src="player2.jpg" alt="IC TOBI — Avir">
+          <h3>IC TOBI</h3>
+          <p><strong>Role:</strong> Secondary Rusher</p>
+          <p><strong>Name:</strong> Avir</p>
+        </div>
 
-      <div class="team-member">
-        <img src="player3.jpg" alt="IC MADARA">
-        <h3>IC MADARA</h3>
-        <p><strong>Role:</strong> Sniper</p>
-        <p><strong>Name:</strong> Abhyuday</p>
-      </div>
+        <div class="team-member">
+          <img src="player3.jpg" alt="IC MADARA — Abhyuday">
+          <h3>IC MADARA</h3>
+          <p><strong>Role:</strong> Sniper</p>
+          <p><strong>Name:</strong> Abhyuday</p>
+        </div>
 
-      <div class="team-member">
-        <img src="player4.jpg" alt="IC SYREX">
-        <h3>IC SYREX</h3>
-        <p><strong>Role:</strong> All Rounder</p>
-        <p><strong>Name:</strong> Himansu</p>
-      </div>
+        <div class="team-member">
+          <img src="player4.jpg" alt="IC SYREX — Himansu">
+          <h3>IC SYREX</h3>
+          <p><strong>Role:</strong> All Rounder</p>
+          <p><strong>Name:</strong> Himansu</p>
+        </div>
 
-      <div class="team-member">
-        <img src="player5.jpg" alt="IC VOLT">
-        <h3>IC VOLT</h3>
-        <p><strong>Role:</strong> Primary Rusher</p>
-        <p><strong>Name:</strong> Yash</p>
-      </div>
+        <div class="team-member">
+          <img src="player5.jpg" alt="IC VOLT — Yash">
+          <h3>IC VOLT</h3>
+          <p><strong>Role:</strong> Primary Rusher</p>
+          <p><strong>Name:</strong> Yash</p>
+        </div>
+      </section>
     </section>
 
     <footer>
@@ -83,7 +121,6 @@
     </footer>
   </div>
 
-  <!-- External JavaScript -->
   <script src="script.js"></script>
 </body>
-        </html>
+</html>
